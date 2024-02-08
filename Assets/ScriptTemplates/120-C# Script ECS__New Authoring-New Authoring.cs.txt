@@ -1,0 +1,23 @@
+using Unity.Entities;
+using UnityEngine;
+
+namespace ZombiesShooter
+{
+    public class #SCRIPTNAME#Authoring : MonoBehaviour
+    {
+        // Create properties here
+    }
+    
+    public class #SCRIPTNAME#Baker : Baker<#SCRIPTNAME#Authoring>
+    {
+        public override void Bake(#SCRIPTNAME#Authoring authoring)
+        {
+            Entity currentEntity = GetEntity(TransformUsageFlags.Dynamic);
+    
+            AddComponent(currentEntity, new #SCRIPTNAME#()
+            {
+                // Bind properties here
+            });
+        }
+    }
+}
